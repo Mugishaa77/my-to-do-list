@@ -39,12 +39,12 @@ body {
 }
 
 .todo-wrapper ol li:nth-child(even) {
-    background: #ddd;
+    background: #FF9F9F;
 }
 
 .todo-wrapper .completed {
     text-decoration: line-through;
-    color: #666;
+    color: #400172;
 }
 
 .todo-wrapper .pretty-button {

@@ -39,7 +39,7 @@ body {
 }
 
 .todo-wrapper ol li:nth-child(even) {
-    background: #FF9F9F;
+    background: #FFD4B2;
 }
 
 .todo-wrapper .completed {
@@ -91,6 +91,9 @@ body {
     background-color: #FF8787;
 }
 
+.todo-wrapper #load-list {
+    background-color: #ECA86A;
+}
 @media only screen and (min-width: 1400px) {
     .todo-wrapper {
         width: 50%;

@@ -47,7 +47,7 @@ var emptyButton = document.getElementById("empty-button");
 emptyButton.addEventListener=("click", emptyList);
 
 function emptyList() {
-    var toDoItems = toDoList.children;
+   var toDoItems = getElementsByTagName("li");
     while (toDoItems.length > 0) {
         toDoItems.item(0).remove();
     }
@@ -60,6 +60,38 @@ function emptyList() {
 var saveList = document.getElementById("save-button");
 saveList.addEventListener=("click", saveListItems );
 
-function saveListItems (){
+function saveList() {
+    var toDos = [];
+
+    for (var i = 0; i < toDoList.children.length; i++) {
+        var toDo = toDoList.children.item(i);
+
+        var toDoInfo = {
+            "task": toDo.innerText,
+            "completed": toDo.classList.contains("completed")
+        };
+
+        toDos.push(toDoInfo);
+
+    }
+
+    localStorage.setItem("toDos", JSON.stringify(toDos));
 
 }
+
+var loadedList = document.getElementsById("load-list")
+loadedList.addEventListener("click", loadLIst);
+
+function loadList() {
+    if (localStorage.getItem("toDos") != null) {
+        var toDos = JSON.parse(localStorage.getItem("toDos"));
+
+        for (var i = 0; i < toDos.length; i++) {
+            var toDo = toDos[i];
+            newToDoItem(toDo.task, toDo.completed);
+        }
+    }
+}
+
+
+

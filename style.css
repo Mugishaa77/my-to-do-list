@@ -80,18 +80,11 @@ body {
 }
 
 .todo-wrapper #clear-button {
-    background-color: #CE7878;
+    background-color:#ECA86A;
 }
 
-.todo-wrapper #empty-button {
-    background-color: #9B1C20;
-}
 
-.todo-wrapper #save-button {
-    background-color: #FF8787;
-}
-
-.todo-wrapper #load-list {
+.todo-wrapper #clear-completed-button {
     background-color: #ECA86A;
 }
 @media only screen and (min-width: 1400px) {

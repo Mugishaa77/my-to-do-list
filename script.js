@@ -43,22 +43,23 @@ function toggleToDoItemState() {
     }
 }
 
-var emptyButton = document.getElementById("empty-button");
-emptyButton.addEventListener=("click", emptyList);
 
-function emptyList() {
-   var toDoItems = getElementsByTagName("li");
-    while (toDoItems.length > 0) {
-        toDoItems.item(0).remove();
-    }
+
+
+var clearListButton = document.getElementById("clear-button");
+clearListButton.addEventListener("click", clearList);
+
+function clearList() {
+  var toDoList = document.getElementById("todo-list");
+  var toDoItems = toDoList.getElementsByTagName("li");
+  while (toDoItems.length > 0) {
+    toDoList.removeChild(toDoItems[0]);
+  }
 }
 
 
-
-
-
 var saveList = document.getElementById("save-button");
-saveList.addEventListener=("click", saveListItems );
+saveList.addEventListener("click", saveListItems );
 
 function saveList() {
     var toDos = [];
